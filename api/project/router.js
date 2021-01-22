@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
   router.post("/", (req, res) => {
     Project.add(req.body)
       .then(res => {
-        res.status(201).json(res);
+        res.status(201).json(res.body);
       })
       .catch(err => {
         res.status(500).json({ error: err.message });

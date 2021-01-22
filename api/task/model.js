@@ -14,5 +14,5 @@ function add(task){
 function list(){
     return db('tasks as t')
     .join('projects as p', 't.project_id', 'p.id')
-    .select('p.project_name', 'p.project_description', 't.task_description', 't.notes');
+    .select('p.project_name', 'p.project_description', 't.task_description', 't.task_notes');
 }
