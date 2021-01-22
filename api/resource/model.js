@@ -8,7 +8,7 @@ module.exports = {
 
 
 function add(res){
-    return db('resources').insert(res);
+    return db('resources').insert(res).into('resources');
 };
 
 function list(){

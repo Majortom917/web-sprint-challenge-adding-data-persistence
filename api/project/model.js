@@ -8,7 +8,7 @@ module.exports = {
 
 
 function add(project){
-    return db('projects').insert(project);
+    return db('projects').insert(project).into('projects');
 };
 
 function list(){

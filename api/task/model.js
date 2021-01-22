@@ -8,7 +8,7 @@ module.exports = {
 
 
 function add(task){
-    return db('tasks').insert(task);
+    return db('tasks').insert(task).into('tasks');
 };
 
 function list(){

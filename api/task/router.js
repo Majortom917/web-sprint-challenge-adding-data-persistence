@@ -15,8 +15,8 @@ router.get("/", (req, res) => {
   });
   router.post("/", (req, res) => {
     Task.add(req.body)
-      .then(res => {
-        res.status(201).json(res.body);
+      .then(task => {
+        res.status(201).json(task.body);
       })
       .catch(err => {
         res.status(500).json({ error: err.message });

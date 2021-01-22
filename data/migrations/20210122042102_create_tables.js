@@ -38,6 +38,12 @@ exports.up = function(knex) {
         .references('id')
         .inTable('projects')
         .onDelete('RESTRICT')
+        tbl.integer('task_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('tasks')
+        .onDelete('RESTRICT')
         
     })
   
